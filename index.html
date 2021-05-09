@@ -27,13 +27,18 @@
         <div class="burger__container">
           <div class="header__burger"></div>
         </div>
-        <nav class="header__menu">
-          <ul class="header__list">
-            <li><a href="#" class="header__list_link">Услуги</a></li>
-            <li><a href="#" class="header__list_link">Портфолио</a></li>
-            <li><a href="#" class="header__list_link">Стоимость</a></li>
-          </ul>
-        </nav>
+        <div class="header__menu header__menu_open">
+          <div class="header__menu_wrapper">
+            <div class="header__menu_close-button"></div>
+            <nav class="header__menu-navigation">
+              <ul class="header__list">
+                <li class="header__list_item"><a href="#features" class="header__list_link">Услуги</a></li>
+                <li class="header__list_item"><a href="#portfolio" class="header__list_link">Портфолио</a></li>
+                <li class="header__list_item"><a href="#offer" class="header__list_link">Стоимость</a></li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
         <a class="header__phone" href="tel:+7(499)995-55-77">+7 (499) 995-55-77</a>
         <a href="#" class="header__call-button"><span>Заказать звонок</span></a>
       </div>
@@ -74,7 +79,7 @@
         </figure>
       </div>
     </section>
-    <section class="features">
+    <section id="features" class="features">
       <div class="wrap">
         <div class="features__content">
           <div class="features__title title">Что я делаю</div>
@@ -116,7 +121,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="wrap">
         <div class="portfolio__content">
           <div class="portfolio__title title">Примеры моих работ</div>
@@ -149,7 +154,7 @@
         </div>
       </div>
     </section>
-    <section class="offer">
+    <section id="offer" class="offer">
       <span class="fly-tags offer__fly-tag__braces animation">{&nbsp;}</span>
       <span class="fly-tags offer__fly-tag__closed-tag animation">&lt;/&gt;</span>
       <span class="fly-tags offer__fly-tag__div animation">&lt;div&gt;</span>
