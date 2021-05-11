@@ -1,3 +1,5 @@
+// Swiper settings 
+
 var mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -24,16 +26,23 @@ var mySwiper = new Swiper('.swiper-container', {
     }
 })
 
+// Tags animation
+
 $(document).ready(function(){
-  
   $('.fly-tags').removeClass('animation');
-  
 });
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  setTimeout(() => {
-    document.querySelectorAll('.fly-tags').forEach((el) => {
-      el.classList.remove('animation');
-    });
-  }, 300);
+// Mobile menu
+
+$(function () {
+  
+  $(".header__burger").click(function (event) {
+    $(".header__menu, .burger__container").toggleClass("header__menu_open");
+    if ($(".header__menu").hasClass("header__menu_open")) {
+      $("body").css("overflow", "hidden");
+    } else {
+      $("body").css("overflow", "auto");
+    }
+    return false;
+  });  
 });

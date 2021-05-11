@@ -27,13 +27,18 @@
         <div class="burger__container">
           <div class="header__burger"></div>
         </div>
-        <nav class="header__menu">
-          <ul class="header__list">
-            <li><a href="#" class="header__list_link">Услуги</a></li>
-            <li><a href="#" class="header__list_link">Портфолио</a></li>
-            <li><a href="#" class="header__list_link">Стоимость</a></li>
-          </ul>
-        </nav>
+        <div class="header__menu">
+          <div class="header__menu_wrapper">
+            <!-- <div class="header__menu_close-button"></div> -->
+            <nav class="header__menu-navigation">
+              <ul class="header__list">
+                <li class="header__list_item"><a href="#features" class="header__list_link">Услуги</a></li>
+                <li class="header__list_item"><a href="#portfolio" class="header__list_link">Портфолио</a></li>
+                <li class="header__list_item"><a href="#offer" class="header__list_link">Стоимость</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
         <a class="header__phone" href="tel:+7(499)995-55-77">+7 (499) 995-55-77</a>
         <a href="#" class="header__call-button"><span>Заказать звонок</span></a>
       </div>
@@ -74,7 +79,7 @@
         </figure>
       </div>
     </section>
-    <section class="features">
+    <section id="features" class="features">
       <div class="wrap">
         <div class="features__content">
           <div class="features__title title">Что я делаю</div>
@@ -116,29 +121,32 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="wrap">
         <div class="portfolio__content">
           <div class="portfolio__title title">Примеры моих работ</div>
           <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="portfolio-slider swiper-container">
-              <div class="portfolio-slider__wrapper swiper-wrapper">  
+          <div class="swiper-button-next"></div>
+          <div class="portfolio-slider swiper-container">
+            <div class="portfolio-slider__wrapper swiper-wrapper">
               <div class="portfolio-slider__slide swiper-slide">
                 <figure class="portfolio-slider__image">
-                    <img src="img/my-work1.png" alt="Мои работы | Сайт психолога Веры Антоновой" title="Мои работы | Сайт психолога Веры Антоновой">
-                    <figcaption class="portfolio-slider__text">Сайт психолога Веры Антоновой</figcaption>
+                  <img src="img/my-work1.png" alt="Мои работы | Сайт психолога Веры Антоновой"
+                    title="Мои работы | Сайт психолога Веры Антоновой">
+                  <figcaption class="portfolio-slider__text">Сайт психолога Веры Антоновой</figcaption>
                 </figure>
               </div>
               <div class="portfolio-slider__slide swiper-slide">
                 <figure class="portfolio-slider__image">
-                    <img src="img/my-work2.png" alt="Мои работы | Интернет-магазин детской одежды" title="Мои работы | Интернет-магазин детской одежды">
-                    <figcaption class="portfolio-slider__text">Интернет-магазин детской одежды</figcaption>
+                  <img src="img/my-work2.png" alt="Мои работы | Интернет-магазин детской одежды"
+                    title="Мои работы | Интернет-магазин детской одежды">
+                  <figcaption class="portfolio-slider__text">Интернет-магазин детской одежды</figcaption>
                 </figure>
               </div>
               <div class="portfolio-slider__slide swiper-slide">
                 <figure class="portfolio-slider__image">
-                  <img src="img/my-work3.png" alt="Мои работы | Сайт магазина «Рыболов»" title="Мои работы | Сайт магазина «Рыболов»">
+                  <img src="img/my-work3.png" alt="Мои работы | Сайт магазина «Рыболов»"
+                    title="Мои работы | Сайт магазина «Рыболов»">
                   <figcaption class="portfolio-slider__text">Сайт магазина «Рыболов»</figcaption>
                 </figure>
               </div>
@@ -149,7 +157,7 @@
         </div>
       </div>
     </section>
-    <section class="offer">
+    <section id="offer" class="offer">
       <span class="fly-tags offer__fly-tag__braces animation">{&nbsp;}</span>
       <span class="fly-tags offer__fly-tag__closed-tag animation">&lt;/&gt;</span>
       <span class="fly-tags offer__fly-tag__div animation">&lt;div&gt;</span>
