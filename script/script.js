@@ -35,14 +35,14 @@ $(document).ready(function(){
 // Mobile menu
 
 $(function () {
-  
-  $(".header__burger").click(function (event) {
+  $(".header__burger").click(function (e) {
     $(".header__menu, .burger__container").toggleClass("header__menu_open");
     if ($(".header__menu").hasClass("header__menu_open")) {
-      $("body").css("overflow", "hidden");
+      $("body").css("overflow", "hidden"); 
     } else {
       $("body").css("overflow", "auto");
     }
     return false;
   });  
 });
+
