@@ -188,7 +188,7 @@
     position: absolute;
     top: 20px;
     left: 270px;
-    border: 1px solid #E0EAF0;
+    border: 1px solid #2fcd99;
     border-radius: 100%;
     background: none;
     z-index: 6;
@@ -202,7 +202,7 @@
     left: calc(50% - 10px);
     width: 20px;
     height: 1px;
-    background: #E0EAF0;
+    background: #2fcd99;
   }
 
   .header__menu_open .header__burger::before {
@@ -265,7 +265,8 @@
   }
 
   .portfolio__content {
-    padding: 91px 0 101px;
+    padding: 182px 0 101px;
+    margin-top: -91px;
   }
 
   .slider__arrows {
@@ -450,11 +451,13 @@
   }
 
   .features__content {
-    padding: 22px 0 47px;
+    padding: 88px 0 47px;
+    margin-top: -44px;
   }
 
   .portfolio__content {
-    padding: 47px 0 51px;
+    padding: 94px 0 51px;
+    margin-top: -47px;
   }
 
   .offer .fly-tags {
@@ -496,6 +499,15 @@
   .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
+  }
+
+  .contact__form-item {
+    flex-direction: column;
+  }
+  
+  .contact__form_label {
+    padding-bottom: 10px;
+    text-align: left;
   }
 
   .footer__content {
@@ -576,11 +588,15 @@
 
   .portfolio-slider {
     padding-top: 40px;
-}
+  }
 
   .portfolio-slider__image img {
     height: 250px;
     object-fit: cover;
+  }
+
+  .popup__contact_title {
+    max-width: 300px;
   }
 
   .footer__content {
