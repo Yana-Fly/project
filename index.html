@@ -39,7 +39,7 @@
           </div>
         </div>
         <a class="header__phone" href="tel:+7(499)995-55-77">+7 (499) 995-55-77</a>
-        <a href="#" class="header__call-button"><span>Заказать звонок</span></a>
+        <a href="#popup-tel" class="header__call-button popup_link"><span>Заказать звонок</span></a>
       </div>
     </div>
   </header>
@@ -73,7 +73,7 @@
           <figcaption class="about__description">
             <h1 class="about__title">Яна Флягина</h1>
             <h2 class="about__subtitle">Frontend-разработчик и веб-верстальщик</h2>
-            <a href="#popup" class="main-button">Узнать больше</a>
+            <a href="#popup" class="main-button popup_link">Узнать больше</a>
           </figcaption>
         </figure>
       </div>
@@ -116,7 +116,7 @@
               <div class="features__item_text">Исправление и&nbsp;доработка существующей вёрстки</div>
             </div>
           </div>
-          <a href="#popup" class="main-button">Узнать стоимость</a>
+          <a href="#popup" class="main-button popup_link">Узнать стоимость</a>
         </div>
       </div>
     </section>
@@ -152,7 +152,7 @@
             </div>
             <div class="swiper-pagination"></div>
           </div>
-          <a href="#popup" class="main-button">Заказать проект</a>
+          <a href="#popup" class="main-button popup_link">Заказать проект</a>
         </div>
       </div>
     </section>
@@ -173,6 +173,7 @@
       </div>
     </section>
     <section id="popup" class="popup">
+      <div class="overlay_popup"></div>
       <div class="popup__wrapper">
         <div class="popup__content">
           <button class="popup__close"></button>
@@ -186,6 +187,26 @@
                 <input type="tel" id="phone" class="contact__form_control" name="phone">
                 <label for="email" class="contact__form_label">Электронная почта: </label>
                 <input type="email" id="email" class="contact__form_control" name="email">
+                <button class="contact__form_send">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="popup-tel" class="popup">
+      <div class="overlay_popup"></div>
+      <div class="popup__wrapper">
+        <div class="popup__content">
+          <button class="popup__close"></button>
+          <div class="popup__contact">
+            <h3 class="popup__contact_title">Форма для обратной связи</h3>
+            <div class="popup__contact_form">
+              <form action="#" class="contact__form">
+                <label for="popup-tel-name" class="contact__form_label">Имя: </label>
+                <input type="text" id="popup-tel-name" class="contact__form_control" name="name">
+                <label for="popup-tel-phone" class="contact__form_label">Телефон: </label>
+                <input type="tel" id="popup-tel-phone" class="contact__form_control" name="phone">
                 <button class="contact__form_send">Отправить</button>
               </form>
             </div>
@@ -209,7 +230,7 @@
           <a class="footer__email" href="mailto:dmitry@alekseev.com">yana.flyagina@yandex.ru</a>
         </div>
         <div class="footer__links">
-          <a href="#" class="footer__call-button">Заказать звонок</a>
+          <a href="#popup-tel" class="footer__call-button">Заказать звонок</a>
           <div class="social__list">
             <a href="https://vk.com/yana_flyagina" class="social__link sprite sprite-vk" target="_blank"></a>
             <a href="https://www.facebook.com/yana.semenova.169" class="social__link sprite sprite-facebook"

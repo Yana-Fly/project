@@ -26,23 +26,44 @@ var mySwiper = new Swiper('.swiper-container', {
     }
 })
 
-// Tags animation
+
 
 $(document).ready(function(){
+
+  var body = $('body');
+  var popupLinks = $('.popup_link');
+
+  // Tags animation
+
   $('.fly-tags').removeClass('animation');
-});
 
-// Mobile menu
+  // Mobile menu
 
-$(function () {
-  $(".header__burger").click(function (e) {
-    $(".header__menu, .burger__container").toggleClass("header__menu_open");
-    if ($(".header__menu").hasClass("header__menu_open")) {
-      $("body").css("overflow", "hidden"); 
+  $('.header__burger').click(function (e) {
+    $('.header__menu, .burger__container').toggleClass('header__menu_open');
+    if ($('.header__menu').hasClass('header__menu_open')) {
+      body.css('overflow', 'hidden'); 
     } else {
-      $("body").css("overflow", "auto");
+      body.css('overflow', 'auto');
     }
     return false;
   });  
+
+  // popups
+
+  popupLinks.click(function() { 
+    var popup_id = $(this).attr("href"); 
+    $(popup_id).show(); 
+    $('.overlay_popup').show(); 
+  })
+  
+  $('.overlay_popup, .popup__close, .contact__form_send').click(function() { 
+    $('.overlay_popup, .popup').hide();
+  })
+
 });
+
+
+
+
 
