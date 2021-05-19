@@ -65,85 +65,81 @@ $(document).ready(function(){
     var popup_id = $(this).attr("href"); 
     $(popup_id).addClass('popup__open');
     $('.overlay_popup').addClass('popup__open');
+    body.css('overflow', 'hidden'); 
   })
   
   $('.overlay_popup, .popup__close').click(function() { 
     $('.overlay_popup, .popup').removeClass('popup__open');
+    body.css('overflow', 'auto');
   })
 
-  if($('.popup').hasClass('popup__open')){
-    body.css('overflow', 'hidden'); 
-  } else {
-    body.css('overflow', 'auto');
-  }
+  // validate
 
-    // validate
-
-    jQuery.validator.addMethod("checkMask", function(value, element) {
-      return /^(\+7)?\(?[9][0-9]{2}\)?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}/g.test(value); 
-    });
+  jQuery.validator.addMethod("checkMask", function(value, element) {
+    return /^(\+7)?\(?[9][0-9]{2}\)?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}/g.test(value); 
+  });
   
-    $('#popup_form').validate ({
-      rules: {
-        email: {
-          required: true,
-          email: true
-        },
-        name: {
-          required: true,
-          minlength: 3
-        },
-        phone: {
-          required: true,
-          checkMask: true
-        }
+  $('#popup_form').validate ({
+    rules: {
+      email: {
+        required: true,
+        email: true
       },
-      messages: {
-        email: {
-          required: 'Поле email обязательно для заполнения',
-          email: "Адрес электронной почты был введен неправильно"
-        },
-        name: {
-          required: 'Имя обязательно должно быть заполнено',
-          minlength: 'Длина имени должна быть не менее 3-х символов'
-        },
-        phone: {
-          required: 'Номер телефона обязательно должен быть заполнен',
-          checkMask: "Введите телефон в формате +7(999)999-99-99"
-        }
+      name: {
+        required: true,
+        minlength: 3
       },
-      submitHandler: function(form) {
-        form.submit();
+      phone: {
+        required: true,
+        checkMask: true
       }
-    });
+    },
+    messages: {
+      email: {
+        required: 'Поле email обязательно для заполнения',
+        email: "Адрес электронной почты был введен неправильно"
+      },
+      name: {
+        required: 'Имя обязательно должно быть заполнено',
+        minlength: 'Длина имени должна быть не менее 3-х символов'
+      },
+      phone: {
+        required: 'Номер телефона обязательно должен быть заполнен',
+        checkMask: "Введите телефон в формате +7(999)999-99-99"
+      }
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
     
-    $('#popup-tel_form').validate ({
-      rules: {
-        name: {
-          required: true,
-          minlength: 3
-        },
-        phone: {
-          required: true,
-          checkMask: true
-        }
+  $('#popup-tel_form').validate ({
+    rules: {
+      name: {
+        required: true,
+        minlength: 3
       },
-      messages: {
-        name: {
-          required: 'Имя обязательно должно быть заполнено',
-          minlength: 'Длина имени должна быть не менее 3-х символов'
-        },
-        phone: {
-          required: 'Номер телефона обязательно должен быть заполнен',
-          checkMask: "Введите телефон в формате +7(999)999-99-99"
-        }
-      },
-      submitHandler: function(form) {
-        form.submit();
+      phone: {
+        required: true,
+        checkMask: true
       }
-    });
+    },
+    messages: {
+      name: {
+        required: 'Имя обязательно должно быть заполнено',
+        minlength: 'Длина имени должна быть не менее 3-х символов'
+      },
+      phone: {
+        required: 'Номер телефона обязательно должен быть заполнен',
+        checkMask: "Введите телефон в формате +7(999)999-99-99"
+      }
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
   
-    $('#phone, #popup-tel-phone').mask("+7(999)999-99-99", {autoclear: false});
+  $('#phone, #popup-tel-phone').mask("+7(999)999-99-99", {autoclear: false});
   
 });
 
