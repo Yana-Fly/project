@@ -180,7 +180,7 @@
           <div class="popup__contact">
             <h3 class="popup__contact_title">Форма для обратной связи</h3>
             <div class="popup__contact_form">
-              <form action="#" class="contact__form">
+              <form id="popup_form" action="#" class="contact__form">
                 <div class="contact__form-item">
                   <label for="name" class="contact__form_label">Имя: </label>
                   <input type="text" id="name" class="contact__form_control" name="name">
@@ -192,7 +192,7 @@
                   <label for="email" class="contact__form_label">Электронная почта: </label>
                   <input type="email" id="email" class="contact__form_control" name="email">
                 </div>
-                <button class="main-button contact__form_send">Отправить</button>
+                <button type="submit" class="main-button contact__form_send" onsubmit="return false;">Отправить</button>
               </form>
             </div>
           </div>
@@ -207,7 +207,7 @@
           <div class="popup__contact">
             <h3 class="popup__contact_title">Форма для обратной связи</h3>
             <div class="popup__contact_form">
-              <form action="#" class="contact__form">
+              <form id="popup-tel_form" action="#" class="contact__form">
                 <div class="contact__form-item">
                   <label for="popup-tel-name" class="contact__form_label">Имя: </label>
                   <input type="text" id="popup-tel-name" class="contact__form_control" name="name">
@@ -215,7 +215,7 @@
                   <label for="popup-tel-phone" class="contact__form_label">Телефон: </label>
                   <input type="tel" id="popup-tel-phone" class="contact__form_control" name="phone">
                 </div>
-                <button class="main-button contact__form_send">Отправить</button>
+                <button type="submit"  class="main-button contact__form_send" onsubmit="return false;">Отправить</button>
               </form>
             </div>
           </div>
@@ -255,8 +255,9 @@
     </section>
   </footer>
 
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="script/script.js"></script>
 </body>
