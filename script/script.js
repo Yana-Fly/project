@@ -76,7 +76,7 @@ $(document).ready(function(){
   // validate
 
   jQuery.validator.addMethod("checkMask", function(value, element) {
-    return /^(\+7)?\(?[9][0-9]{2}\)?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}/g.test(value); 
+    return /^(\+7)?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/g.test(value); 
   });
   
   $('#popup_form').validate ({
