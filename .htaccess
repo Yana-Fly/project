@@ -11,10 +11,10 @@ RewriteRule ^(.*)$ https://webdevfly.ru/$1 [R=301,L]
 <IfModule mod_expires.c>
 
     ExpiresActive on
-    ExpiresDefault                                      "access plus 1 month"
+    ExpiresDefault                                      "access plus 1 year"
 
   # CSS
-    ExpiresByType text/css                              "access plus 1 month"
+    ExpiresByType text/css                              "access plus 1 year"
 
   # Data interchange
     ExpiresByType application/atom+xml                  "access plus 1 hour"
