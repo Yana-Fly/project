@@ -110,6 +110,7 @@ $(document).ready(function(){
     },
     submitHandler: function(form) {
       form.submit();
+      alert("Ваша заявка принята. В ближайшее время мы свяжемся с вами!");
     }
   });
     
@@ -136,6 +137,7 @@ $(document).ready(function(){
     },
     submitHandler: function(form) {
       form.submit();
+      alert("Ваша заявка принята. В ближайшее время мы свяжемся с вами!");
     }
   });
   

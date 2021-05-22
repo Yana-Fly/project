@@ -297,7 +297,8 @@ input::placeholder {
   overflow: hidden;
 }
 
-.about__ellipse svg {
+.about__ellipse svg,
+.about__ellipse object {
   display: block;
   width: 100%;
   height: 100%;
