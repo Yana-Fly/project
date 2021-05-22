@@ -10,8 +10,11 @@ RewriteRule ^(.*)$ https://webdevfly.ru/$1 [R=301,L]
 # Правила эффективного использования кеша
 <IfModule mod_expires.c>
 
+    AddType application/font-woff2 .woff2
+    AddType application/x-font-opentype .otf
+
     ExpiresActive on
-    ExpiresDefault                                      "access plus 1 year"
+    ExpiresDefault                                      "access plus 1 month"
 
   # CSS
     ExpiresByType text/css                              "access plus 1 year"
@@ -76,7 +79,7 @@ RewriteRule ^(.*)$ https://webdevfly.ru/$1 [R=301,L]
     ExpiresByType font/woff                             "access plus 1 month"
 
     # Web Open Font Format (WOFF) 2.0
-    ExpiresByType application/font-woff2                "access plus 1 month"
+    ExpiresByType application/font-woff2                "access plus 1 year"
 
   # Other
     ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
