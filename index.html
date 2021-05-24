@@ -180,7 +180,7 @@
           <div class="popup__contact">
             <h3 class="popup__contact_title">Форма для обратной связи</h3>
             <div class="popup__contact_form">
-              <form id="popup_form" action="#" class="contact__form">
+              <form id="popup_form" action="#popup__contact_message" class="contact__form">
                 <div class="contact__form-item">
                   <label for="name" class="contact__form_label">Имя: </label>
                   <input type="text" id="name" class="contact__form_control" name="name" placeholder="Ваше имя">
@@ -209,7 +209,7 @@
           <div class="popup__contact">
             <h3 class="popup__contact_title">Форма для обратной связи</h3>
             <div class="popup__contact_form">
-              <form id="popup-tel_form" action="#" class="contact__form">
+              <form id="popup-tel_form" action="#popup__contact_message" class="contact__form">
                 <div class="contact__form-item">
                   <label for="popup-tel-name" class="contact__form_label">Имя: </label>
                   <input type="text" id="popup-tel-name" class="contact__form_control" name="name"
@@ -227,7 +227,7 @@
         </div>
       </div>
     </section>
-    <div class="popup__contact_message">
+    <div id="popup__contact_message" class="popup__contact_message">
       <p class="message_text">Ваша заявка принята. В&nbsp;ближайшее время мы свяжемся с&nbsp;вами!</p>
       <button class="popup__close popup__close_message"></button>
     </div>

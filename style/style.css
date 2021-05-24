@@ -663,7 +663,7 @@ label.error {
   color: #ef5350;
 }
 
-.popup__contact_message {
+#popup__contact_message {
   display: none;
   position: fixed;
   top: 15px;
@@ -673,6 +673,10 @@ label.error {
   z-index: 10;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#popup__contact_message:target {
+  display: block;
 }
 
 .message_text {
