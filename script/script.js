@@ -109,7 +109,10 @@ $(document).ready(function(){
       }
     },
     submitHandler: function(form) {
-      form.submit();
+      form.submit(function (event) {
+        event.preventDefault();
+        return false;
+      });
       $('#popup_form').replaceWith('<p class="message_text">Ваша заявка принята. В&nbsp;ближайшее время мы свяжемся с&nbsp;вами!</p>');
     }
   });
@@ -136,8 +139,12 @@ $(document).ready(function(){
       }
     },
     submitHandler: function (form) {
-      form.submit();
+      form.submit(function (event) {
+        event.preventDefault();
+        return false;
+      });
       $('.popup__contact_message').css('display', 'block');
+      $('.overlay_popup, .popup').removeClass('popup__open');
     }
   });
 
