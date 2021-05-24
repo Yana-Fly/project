@@ -141,9 +141,9 @@ $(document).ready(function(){
 
   $('#phone, #popup-tel-phone').mask("+7(999)999-99-99", {autoclear: false});
   
-  $('.popup__close_message').click(function () {
-    $('.popup__contact_message').hide();
-  });
+  // $('.popup__close_message').click(function () {
+  //   $('.popup__contact_message').hide();
+  // });
 });
 
 
