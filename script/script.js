@@ -110,7 +110,7 @@ $(document).ready(function(){
     },
     submitHandler: function(form) {
       form.submit();
-      alert("Ваша заявка принята. В ближайшее время мы свяжемся с вами!");
+      $('#popup_form').replaceWith('<p class="message_text">Ваша заявка принята. В&nbsp;ближайшее время мы свяжемся с&nbsp;вами!</p>');
     }
   });
     
@@ -135,14 +135,17 @@ $(document).ready(function(){
         checkMask: "Введите телефон в формате +7(999)999-99-99"
       }
     },
-    submitHandler: function(form) {
+    submitHandler: function (form) {
       form.submit();
-      alert("Ваша заявка принята. В ближайшее время мы свяжемся с вами!");
+      $('.popup__contact_message').css('display', 'block');
     }
   });
-  
+
   $('#phone, #popup-tel-phone').mask("+7(999)999-99-99", {autoclear: false});
   
+  $('.popup__close_message').click(function () {
+    $('.popup__contact_message').hide();
+  });
 });
 
 

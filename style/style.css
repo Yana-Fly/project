@@ -393,7 +393,8 @@ input::placeholder {
 }
 
 .features__item_text,
-.contact__form-item {
+.contact__form-item,
+.message_text {
   padding-top: 14px;
   color: #8993ad;
   text-align: center;
@@ -638,7 +639,7 @@ input::placeholder {
   font-size: 25px;
 }
 
-.contact__form {
+.popup__contact_form {
   text-align: center;
 }
 
@@ -660,6 +661,23 @@ label.error {
   font-size: 14px;
   line-height: 20px;
   color: #ef5350;
+}
+
+.popup__contact_message {
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 10px;
+  max-width: 300px;
+  padding: 20px;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.message_text {
+  padding-bottom: 15px;
+  font-size: 18px;
 }
 
 .footer__content {
