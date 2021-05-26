@@ -141,9 +141,19 @@ $(document).ready(function(){
 
   $('#phone, #popup-tel-phone').mask("+7(999)999-99-99", {autoclear: false});
   
-  // $('.popup__close_message').click(function () {
-  //   $('.popup__contact_message').hide();
-  // });
+  // animate scroll
+
+  $('.scrollto a').on('click', function () {
+    let href = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(href).offset().top
+    }, {
+      duration: 360,
+      easing: "swing"
+    });
+    return false;
+  });
+
 });
 
 
